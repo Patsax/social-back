@@ -11,7 +11,7 @@ const UserSchema = new Schema(
         },
         email: {
             type: String,
-            required: 'You must enter your email address',
+            required: 'You must enter a valid email address',
             unique: true,
             match: /.+\@.+\..+/
         },
@@ -24,7 +24,7 @@ const UserSchema = new Schema(
         friends: [
             {
                 type: Schema.Types.ObjectId,
-                ref: 'UserSchema'
+                ref: 'User'
             }
         ]
     },
